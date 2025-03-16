@@ -52,24 +52,5 @@ for name, coords in locations.items():
 # 지도 표시
 folium_static(m)
 
-# 여행 코스 추천
-st.subheader("🎯 맞춤 여행 코스 추천")
-data = {
-    "코스명": ["경복궁 역사 탐방", "한강 자전거 투어", "남산 야경 투어", "에버랜드 놀이공원"],
-    "유형": ["역사", "액티비티", "야경", "테마파크"]
-}
-df = pd.DataFrame(data)
-selected_category = st.selectbox("유형 선택", df["유형"].unique())
-filtered_df = df[df["유형"] == selected_category]
-st.table(filtered_df)
 
-# 최적 경로 탐색
-st.subheader("🚀 최적 경로 찾기")
-G = nx.Graph()
-edges = [("경복궁", "N서울타워", 3), ("N서울타워", "롯데월드", 8), ("경복궁", "롯데월드", 12)]
-G.add_weighted_edges_from(edges)
-start = st.selectbox("출발지 선택", locations.keys())
-end = st.selectbox("목적지 선택", locations.keys())
-if st.button("최적 경로 계산"):
-    path = nx.shortest_path(G, source=start, target=end, weight="weight")
-    st.success(f"최적 경로: {' → '.join(path)}")
+
