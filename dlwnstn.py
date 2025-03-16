@@ -2,7 +2,7 @@ import streamlit as st
 import folium
 from streamlit_folium import folium_static
 import pandas as pd
-import networkx as nx
+
 
 # 페이지 설정
 st.set_page_config(page_title="수학여행 코스 안내", page_icon="🌍", layout="wide")
