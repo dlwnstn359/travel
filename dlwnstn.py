@@ -7,6 +7,7 @@ import pandas as pd
 # 페이지 설정
 st.set_page_config(page_title="수학여행", page_icon="🌍", layout="wide")
 
+st.snow
 # 스타일 적용
 st.markdown(
     """
@@ -39,7 +40,7 @@ st.markdown("""
 사이드바에서 원하는 메뉴를 선택하세요! 🚀
 """)
 
-st.snow
+
 
 # 지도 생성
 m = folium.Map(location=[37.5105, 127.0980], zoom_start=15)
