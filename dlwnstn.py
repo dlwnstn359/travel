@@ -33,7 +33,7 @@ st.markdown(
 )
 
 # 제목
-st.title("<p class='title'>📍 수학여행 코스 안내</p>", unsafe_allow_html=True)
+st.title("📍 수학여행 코스 안내")
 
 # 지도 생성
 st.subheader("🌎 여행 코스 지도")
