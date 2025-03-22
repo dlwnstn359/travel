@@ -11,11 +11,11 @@ locations = {
 
 }
 
-마커 추가
+#마커 추가
 for name, coords in locations.items():
     folium.Marker(coords, tooltip=name, popup=name).add_to(m)
 
-지도 표시
+#지도 표시
 folium_static(m)
 
 #✅ 여행 일정 요약
