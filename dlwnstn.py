@@ -109,10 +109,7 @@ schedules = {
 st.subheader(f"📅 {selected_day} 일정")
 st.dataframe(schedules[selected_day], hide_index=True)
 
-video_file = open("KakaoTalk_20250323_014605193.mp4", "rb")
-video_bytes = video_file.read()
 
-st.video(video_bytes)
 
 # 🌟 추가 정보
 st.markdown("""
