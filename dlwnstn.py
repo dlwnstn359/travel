@@ -109,7 +109,6 @@ schedules = {
 st.subheader(f"📅 {selected_day} 일정")
 st.dataframe(schedules[selected_day], hide_index=True)
 
-st.image("KakaoTalk_20250323_020515596.jpg", caption="와니햄")
 
 
 # 🌟 페이지 제목
