@@ -32,8 +32,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# 제목
-st.title("📍 수학여행 코스 안내")
+# 🌟 제목 & 소개
+st.title("🎒 수학여행 안내")
+st.markdown("""
+### 환영합니다!  
+이 웹사이트에서는 수학여행 일정을 확인하고, 여행 코스와 정보를 볼 수 있습니다.  
+사이드바에서 원하는 메뉴를 선택하세요! 🚀
+""")
 
 # 지도 생성
 st.subheader("🌎 여행 코스 지도")
@@ -101,4 +106,11 @@ schedules = {
 # ✅ 선택한 날짜의 일정 표시
 st.subheader(f"📅 {selected_day} 일정")
 st.dataframe(schedules[selected_day], hide_index=True)
+
+# 🌟 추가 정보
+st.markdown("""
+---
+✅ **문의사항이 있으면 담당 선생님께 연락하세요!**  
+✅ **안전한 여행 되세요! 🚀**
+""")
 
