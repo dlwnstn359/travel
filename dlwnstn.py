@@ -7,7 +7,7 @@ import pandas as pd
 # 페이지 설정
 st.set_page_config(page_title="수학여행", page_icon="🌍", layout="wide")
 
-st.snow
+st.snow()
 # 스타일 적용
 st.markdown(
     """
