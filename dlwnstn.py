@@ -5,7 +5,7 @@ import pandas as pd
 
 
 # 페이지 설정
-st.set_page_config(page_title="수학여행 코스 안내", page_icon="🌍", layout="wide")
+st.set_page_config(page_title="수학여행", page_icon="🌍", layout="wide")
 
 # 스타일 적용
 st.markdown(
@@ -48,6 +48,24 @@ locations = {
 
 for name, coords in locations.items():
     folium.Marker(coords, tooltip=name, popup=name).add_to(m)
+
+# 지도 표시
+folium_static(m)
+
+
+    st.subheader("📅 주요 일정")
+    schedule = pd.DataFrame({
+        "시간": ["08:00", "10:00", "12:30", "15:00", "18:00"],
+        "장소": ["학교 출발", "박물관 탐방", "점심 식사", "유적지 방문", "숙소 도착"],
+        "설명": [
+            "학교에서 버스를 타고 출발",
+            "역사적인 박물관에서 투어 진행",
+            "맛집에서 점심 식사",
+            "유명한 유적지를 탐방",
+            "숙소에서 휴식 및 자유 시간"
+        ]
+    })
+    st.dataframe(schedule, hide_index=True)
 
 # 지도 표시
 folium_static(m)
