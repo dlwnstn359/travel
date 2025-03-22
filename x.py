@@ -6,7 +6,7 @@ st.title("2코스")
 st.subheader("🌎 여행 코스 지도")
 
 # 지도 생성
-m = folium.Map(location=[37.4756, 126.6186], zoom_start=1)
+m = folium.Map(location=[37.4756, 126.6186], zoom_start=10)
 
 # 예제 장소 데이터 (수정된 장소)
 locations = {
