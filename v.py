@@ -4,7 +4,7 @@ from streamlit_folium import folium_static
 import pandas as pd
 st.title("4코스")
 st.subheader("🌎 여행 코스 지도")
-m = folium.Map(location=[37.4756, 126.6186], zoom_start=11)
+m = folium.Map(location=[37.5972, 127.0520], zoom_start=11)
 locations = {
     "경희대학교": [37.5972, 127.0520],
     "광장시장": [37.5701, 126.9997],
