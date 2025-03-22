@@ -1,4 +1,6 @@
 import streamlit as st
+import folium
+from streamlit_folium import folium_static
 st.title("2코스")
 
 st.subheader("🌎 여행 코스 지도")
