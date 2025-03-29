@@ -11,8 +11,7 @@ pages = {
         st.Page("x.py", title="2코스"),
         st.Page("c.py", title="3코스"),
         st.Page("v.py", title="4코스"),
-        
-    ]
+      ]
     }
 
 
