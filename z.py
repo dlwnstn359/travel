@@ -42,3 +42,4 @@ for name, coords in locations.items():
 folium_static(m)
 
 
+
