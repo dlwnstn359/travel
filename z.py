@@ -42,6 +42,8 @@ for name, coords in locations.items():
 folium_static(m)
 
 if st.button('장소 및 맛집 안내'):
+    st.subheader("인천 갑문 홍보관")
+    st.image("갑문홍보관.png")
 
 
 
