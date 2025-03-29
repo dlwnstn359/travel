@@ -126,7 +126,7 @@ st.markdown("""
 
 if st.button('The Easter Egg'):
     password = st.text_input("zzzz", type="password")
-    correct_password = "0312"  # 원하는 비밀번호 설정
+    correct_password = 0312  # 원하는 비밀번호 설정
     if password == correct_password:
         st.image("KakaoTalk_20250323_020515596.jpg", caption="와니햄")
     else:
