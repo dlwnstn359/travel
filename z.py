@@ -41,5 +41,8 @@ for name, coords in locations.items():
 # 지도 표시
 folium_static(m)
 
+if st.button('장소 및 맛집 안내'):
+
+
 
 
