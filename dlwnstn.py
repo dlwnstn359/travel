@@ -7,7 +7,7 @@ import pandas as pd
 # 페이지 설정
 st.set_page_config(page_title="수학여행", page_icon="🌍", layout="wide")
 
-st.snow()
+
 # 스타일 적용
 st.markdown(
     """
@@ -42,22 +42,7 @@ st.markdown("""
 
 
 
-# 지도 생성
-m = folium.Map(location=[37.5105, 127.0980], zoom_start=15)
 
-# 예제 장소 데이터 (수정된 장소)
-locations = {
-    "롯데월드 아쿠아리움": [37.5137, 127.1051],
-    "롯데월드 어드벤처": [37.5112, 127.0980],
-    "호텔국도": [37.5662, 126.9963]  # 호텔국도의 실제 좌표로 수정
-}
-
-# 마커 추가
-for name, coords in locations.items():
-    folium.Marker(coords, tooltip=name, popup=name).add_to(m)
-
-# 지도 표시
-folium_static(m)
 
 # ✅ 날짜 선택 (Day 1, Day 2, Day 3)
 selected_day = st.selectbox("🔎 날짜를 선택하세요", ["1일차", "2일차", "3일차"])
@@ -109,14 +94,24 @@ schedules = {
 st.subheader(f"📅 {selected_day} 일정")
 st.dataframe(schedules[selected_day], hide_index=True)
 
+# 지도 생성
+m = folium.Map(location=[37.5105, 127.0980], zoom_start=15)
 
-if st.button('The Easter Egg'):
-    password = st.text_input("zzzz", type="password")
-    correct_password = "0312"  # 원하는 비밀번호 설정
-    if password == correct_password:
-        st.image("KakaoTalk_20250323_020515596.jpg", caption="와니햄")
-    else:
-        st.warning("zzzz")
+# 예제 장소 데이터 (수정된 장소)
+locations = {
+    "롯데월드 아쿠아리움": [37.5137, 127.1051],
+    "롯데월드 어드벤처": [37.5112, 127.0980],
+    "호텔국도": [37.5662, 126.9963]  # 호텔국도의 실제 좌표로 수정
+}
+
+# 마커 추가
+for name, coords in locations.items():
+    folium.Marker(coords, tooltip=name, popup=name).add_to(m)
+
+# 지도 표시
+folium_static(m)
+
+
 
 
 
@@ -127,3 +122,12 @@ st.markdown("""
 ✅ **안전한 여행 되세요! 🚀**
 """)
 
+
+
+if st.button('The Easter Egg'):
+    password = st.text_input("zzzz", type="password")
+    correct_password = "0312"  # 원하는 비밀번호 설정
+    if password == correct_password:
+        st.image("KakaoTalk_20250323_020515596.jpg", caption="와니햄")
+    else:
+        st.warning("zzzz")
