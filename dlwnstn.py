@@ -110,22 +110,13 @@ st.subheader(f"📅 {selected_day} 일정")
 st.dataframe(schedules[selected_day], hide_index=True)
 
 
-
-# 🌟 페이지 제목
-st.write("Easter Egg")
-
-# 비밀번호 입력
-password = st.text_input("와니햄의 생일을 입력하시오", type="password")
-
-# 올바른 비밀번호 설정
-correct_password = "0312"  # 원하는 비밀번호 설정
-
-# 비밀번호가 맞으면 이미지 보여주기
-if password == correct_password:
-    # 사진 로드
-    st.image("KakaoTalk_20250323_020515596.jpg", caption="와니햄")
-else:
-    st.warning("와니햄 생일도 모르나? 다시 입력하쇼")
+if st.button('The Easter Egg'):
+    password = st.text_input("zzzz", type="password")
+    correct_password = "0312"  # 원하는 비밀번호 설정
+    if password == correct_password:
+        st.image("KakaoTalk_20250323_020515596.jpg", caption="와니햄")
+    else:
+        st.warning("zzzz")
 
 
 
