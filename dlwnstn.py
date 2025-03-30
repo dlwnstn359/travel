@@ -113,8 +113,7 @@ if st.session_state.authenticated:
     st.markdown("""
     ---
     📌 **이준수,강지원,김준영 만듬.**    
-    ✅ **안전한 여행 되세요! 🚀**
-    """)
+    ✅ **안전한 여행 되세요! 🚀**""")
 
 if st.session_state.authenticated:
     p = "123"
