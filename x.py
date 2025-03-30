@@ -47,3 +47,23 @@ st.write("🎒센트럴파크는 바닷물을 이용한 한국의 최초의 해�
 st.subheader("차이나 타운")
 st.image("차이나타운.png")
 st.write("🎒인천 차이나타운은 한국애서 가장 오래된 차이나타운으로 전통적인 중국 건축물과 다채로운 음식문화등을 즐길 수 있는 관광지이다.")
+
+# 맛집 데이터 설정
+restaurants = pd.DataFrame({
+    "맛집 이름": ["럭키 차이나", "신승반점"],
+    "주요 메뉴": ["하얀 짜장면, 멘보샤, 찹쌀 탕수육", "유니짜장, 찹쌀탕수육"],
+    "링크": [
+        "[럭키 차이나](https://naver.me/xxYbkzlw)",
+        "[신승반점](https://naver.me/5WOQeBnI)",
+    ]
+})
+
+# 제목
+st.title("📍 인천 차이나타운 맛집 추천")
+
+# 맛집 리스트 출력
+st.table(restaurants)
+st.subheader("럭키 차이나(찹쌀탕수육)")
+st.image('탕수육.jpg')
+st.subheader("신승반점(유니짜장)")
+st.image('짜장.jpg')
