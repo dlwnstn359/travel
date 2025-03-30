@@ -33,3 +33,14 @@ schedule = pd.DataFrame({
 })
 st.dataframe(schedule, hide_index=True)
 
+
+st.subheader("경희대")
+st.image("경희대.jpg")
+st.write("🎒경희대학교는 예쁘기로 인기있는 캠퍼스 건축물과 학생들에게 다양한 교육을 재공해주는 교육기관입니다.")
+st.subheader("광장 시장")
+st.image("광장시장.png")
+st.write("🎒광장시장은 대한민국 최초의 전통 거래시장으로 음식과 전통 먹거리 문화로 유명하여 다채로운 한식이 존재하는 시장입니다.")
+st.subheader("국립중앙박물관")
+st.image("국립중앙박물관.png")
+st.write("🎒국립 중앙 박물관은 한국에 존재하는 가장 큰 국립 박물관으로 다양한 유물과 예술품을 전시해두었으며 관광객들에게 다양한 역사적 지식을 전해주는 공간입니다.")
+
