@@ -124,7 +124,7 @@ st.markdown("""
 
 
 # 비밀번호 설정
-PASSWORD = "secret123"
+PASSWORD = "123"
 
 
 # Easter Egg 버튼 추가
