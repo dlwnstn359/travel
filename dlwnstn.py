@@ -118,9 +118,27 @@ folium_static(m)
 # 🌟 추가 정보
 st.markdown("""
 ---
-📌 **이준수,강지원 만듬.**    
+📌 **이준수,강지원,김준영 만듬.**    
 ✅ **안전한 여행 되세요! 🚀**
 """)
+
+
+# 비밀번호 설정
+PASSWORD = "secret123"
+
+
+# Easter Egg 버튼 추가
+if st.button("Easter Egg"):
+    password_input = st.text_input("비밀번호를 입력하세요", type="password")
+    
+    # 비밀번호 검증
+    if password_input:
+        if password_input == PASSWORD:
+            st.success("비밀번호가 올바릅니다!")
+            st.image("image.jpg", caption="비밀번호 인증 완료")
+        else:
+            st.error("비밀번호가 틀렸습니다. 다시 시도하세요.")
+
 
 
 
