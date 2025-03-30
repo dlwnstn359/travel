@@ -110,22 +110,9 @@ if st.session_state.authenticated:
     st.markdown("""
     ---
     📌 **이준수,강지원,김준영 만듬.**    
-    ✅ **안전한 여행 되세요! 🚀**""")
+    ✅ **안전한 여행 되세요! 🚀**
+    """)
 
-if st.session_state.authenticated:
-    p = "123"
-    if "show_input" not in st.session_state:
-        st.session_state.show_input = False
-    if st.button("Easter Egg"):
-        st.session_state.show_input = True
-    if st.session_state.show_input:
-        password_input = st.text_input("비밀번호를 입력하세요", type="password")
-        if password_input:
-            if password_input == p:
-                st.success("비밀번호가 올바릅니다!")
-                st.image("KakaoTalk_20250323_020515596.jpg", caption="비밀번호 인증 완료")
-            else:
-                st.error("비밀번호가 틀렸습니다. 다시 시도하세요.")
 
 
 
