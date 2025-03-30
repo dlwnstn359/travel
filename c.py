@@ -56,3 +56,4 @@ restaurants = pd.DataFrame({
 
 
 st.table(restaurants)
+st.image("칼국수.jpg")
