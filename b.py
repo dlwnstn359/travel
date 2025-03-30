@@ -4,72 +4,48 @@ from streamlit_folium import folium_static
 import pandas as pd
 
 
-# 학부모와 학생 비밀번호 설정
-parent_password = "parent123"
-student_password = "student123"
+import streamlit as st
+import pandas as pd
+import os
 
-# 페이지 설정
-pages = ["메인", "1코스", "2코스", "3코스", "4코스"]
+# CSV 파일 경로 설정
+CSV_FILE = "messages.csv"
 
-# 페이지 선택
-page = st.selectbox("페이지를 선택하세요", pages)
+# CSV 파일이 없으면 생성
+if not os.path.exists(CSV_FILE):
+    df = pd.DataFrame(columns=["보낸 사람", "메시지"])
+    df.to_csv(CSV_FILE, index=False)
 
-# "4코스" 페이지는 비밀번호 없이 접근 가능하게 설정
-if page == "4코스":
-    st.title("4코스 페이지")
-    st.write("이곳은 누구나 접근할 수 있는 페이지입니다.")
-    # 4코스 페이지 관련 내용 추가
-    # 예시: st.image("4course_image.jpg")
-    
+# 데이터 불러오기
+def load_messages():
+    return pd.read_csv(CSV_FILE)
+
+# 데이터 저장하기
+def save_message(sender, message):
+    df = load_messages()
+    new_entry = pd.DataFrame({"보낸 사람": [sender], "메시지": [message]})
+    df = pd.concat([df, new_entry], ignore_index=True)
+    df.to_csv(CSV_FILE, index=False)
+
+# Streamlit UI
+st.title("📢 학부모 및 학생 게시판")
+
+# 선생님이 메시지를 입력하는 부분
+st.subheader("✏️ 선생님 메시지 작성")
+message = st.text_area("게시판에 남길 메시지를 입력하세요")
+if st.button("게시하기"):
+    if message:
+        save_message("선생님", message)
+        st.success("✅ 메시지가 게시되었습니다!")
+        st.experimental_rerun()  # 새로고침하여 메시지 업데이트
+    else:
+        st.warning("⚠️ 메시지를 입력하세요.")
+
+# 모든 사용자가 볼 수 있는 게시판
+st.subheader("📜 전체 게시판")
+df = load_messages()
+if not df.empty:
+    st.table(df)  # 게시글을 표 형태로 출력
 else:
-    # 나머지 페이지들은 비밀번호 입력 필요
-    role = st.radio("회원 유형을 선택하세요", ("학부모", "학생"))
+    st.info("아직 게시된 메시지가 없습니다.")
 
-    if role == "학부모":
-        password = st.text_input("학부모 비밀번호를 입력하세요", type="password")
-        if password == parent_password:
-            st.success("학부모 인증 완료")
-            # 인증 후 선택된 페이지 내용 표시
-            if page == "메인":
-                st.title("메인 페이지")
-                st.write("메인 페이지 내용입니다.")
-                # 예시: st.image("main_image.jpg")
-            elif page == "1코스":
-                st.title("1코스 페이지")
-                st.write("1코스 페이지 내용입니다.")
-                # 예시: st.image("1course_image.jpg")
-            elif page == "2코스":
-                st.title("2코스 페이지")
-                st.write("2코스 페이지 내용입니다.")
-                # 예시: st.image("2course_image.jpg")
-            elif page == "3코스":
-                st.title("3코스 페이지")
-                st.write("3코스 페이지 내용입니다.")
-                # 예시: st.image("3course_image.jpg")
-                
-        else:
-            st.warning("학부모 비밀번호가 틀렸습니다. 다시 입력해주세요.")
-    
-    elif role == "학생":
-        password = st.text_input("학생 비밀번호를 입력하세요", type="password")
-        if password == student_password:
-            st.success("학생 인증 완료")
-            # 인증 후 선택된 페이지 내용 표시
-            if page == "메인":
-                st.title("메인 페이지")
-                st.write("메인 페이지 내용입니다.")
-                # 예시: st.image("main_image.jpg")
-            elif page == "1코스":
-                st.title("1코스 페이지")
-                st.write("1코스 페이지 내용입니다.")
-                # 예시: st.image("1course_image.jpg")
-            elif page == "2코스":
-                st.title("2코스 페이지")
-                st.write("2코스 페이지 내용입니다.")
-                # 예시: st.image("2course_image.jpg")
-            elif page == "3코스":
-                st.title("3코스 페이지")
-                st.write("3코스 페이지 내용입니다.")
-                # 예시: st.image("3course_image.jpg")
-        else:
-            st.warning("학생 비밀번호가 틀렸습니다. 다시 입력해주세요.")
