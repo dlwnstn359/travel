@@ -56,4 +56,7 @@ restaurants = pd.DataFrame({
 
 
 st.table(restaurants)
+st.subheader("효담칼국수 닭한마리 명동본점")
 st.image("칼국수.jpg")
+st.subheader("가메골손왕만두 남대문본점")
+st.image("만두.jpg")
