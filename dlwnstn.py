@@ -127,8 +127,16 @@ st.markdown("""
 PASSWORD = "123"
 
 
+# 상태 변수 사용
+if "show_input" not in st.session_state:
+    st.session_state.show_input = False
+
 # Easter Egg 버튼 추가
 if st.button("Easter Egg"):
+    st.session_state.show_input = True
+
+# 비밀번호 입력 필드 표시
+if st.session_state.show_input:
     password_input = st.text_input("비밀번호를 입력하세요", type="password")
     
     # 비밀번호 검증
