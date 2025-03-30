@@ -60,10 +60,10 @@ st.title("📍 인천 차이나타운 맛집 추천")
 
 # 맛집 리스트 출력
 st.table(restaurants)
-st.subheader("럭키 차이나")
-st.image('')
-st.subheader("신승반점")
-st.image('')
+st.subheader("럭키 차이나(찹쌀탕수육)")
+st.image('탕수육.jpg')
+st.subheader("신승반점(유니짜장)")
+st.image('짜장.jpg')
 
 
 
