@@ -47,13 +47,11 @@ st.write("🎒인천 차이나타운은 한국애서 가장 오래된 차이나�
 
 # 맛집 데이터 설정
 restaurants = pd.DataFrame({
-    "맛집 이름": ["인천 차이나타운 공화춘", "신승반점", "연경", "만다복"],
-    "주요 메뉴": ["짜장면, 짬뽕, 탕수육", "삼선짬뽕, 볶음밥", "북경오리, 마라탕", "해물짬뽕, 깐풍기"],
+    "맛집 이름": ["럭키 차이나", "신승반점"],
+    "주요 메뉴": ["하얀 짜장면, 멘보샤, 찹쌀 탕수육", "유니짜장, 찹쌀탕수육"],
     "링크": [
-        "[공화춘 홈페이지](https://www.gonghwachun.co.kr)",
-        "[신승반점 소개](https://blog.naver.com/sinseungbanjeom)",
-        "[연경 홈페이지](https://www.yeongyeong.com)",
-        "[만다복 리뷰](https://blog.naver.com/mandabok)"
+        "[럭키 차이나](https://naver.me/xxYbkzlw)",
+        "[신승반점](https://naver.me/5WOQeBnI)",
     ]
 })
 
