@@ -126,7 +126,7 @@ st.markdown("""
 
 
 # 비밀번호 설정
-PASSWORD = "123"
+PASSWORD = "0312"
 
 
 # 상태 변수 사용
