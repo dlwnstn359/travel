@@ -61,4 +61,9 @@ st.title("📍 광장시장 맛집 추천")
 
 
 st.table(restaurants)
-st.
+st.subheader("박가네 빈대떡(맷돌 빈대떡)")
+st.image("떡.jpg")
+st.subheader("형제육회 본점(육회)")
+st.image("육회.jpg)
+st.subheader("원조누드치즈김밥(치즈참치김밥)")
+st.image("밥.jpg")
