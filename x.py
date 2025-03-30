@@ -40,3 +40,10 @@ schedule = pd.DataFrame({
     ]
 })
 st.dataframe(schedule, hide_index=True)
+
+st.subheader("센트럴파크")
+st.image("센트럴파크.png")
+st.write("🎒센트럴파크는 바닷물을 이용한 한국의 최초의 해수공원으로 인공수로를 따라 조성된 다양한 조형물과 녹지시설이 마련된 송도의 랜드마크이자 휴식공간입니다.")
+st.subheader("차이나 타운")
+st.image("차이나타운.png")
+st.write("🎒인천 차이나타운은 한국애서 가장 오래된 차이나타운으로 전통적인 중국 건축물과 다채로운 음식문화등을 즐길 수 있는 관광지이다.")
