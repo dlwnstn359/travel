@@ -41,10 +41,7 @@ PASSWORD = "123"
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
 
-# Easter Egg 버튼 추가
-if st.button("Easter Egg"):
-    st.session_state.authenticated = False  # 새로 입력받기 위해 초기화
-    st.session_state.show_input = True
+
 
 # 비밀번호 입력 필드 표시
 if st.session_state.get("show_input", False):
