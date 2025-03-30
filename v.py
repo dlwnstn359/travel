@@ -47,4 +47,18 @@ st.write("🎒국립 중앙 박물관은 한국에 존재하는 가장 큰 국�
 
 
 
+restaurants = pd.DataFrame({
+    "맛집 이름": ["박가네 빈대떡", "형제육회 본점", "원조누드치즈김밥"],
+    "주요 메뉴": ["박가네삼합, 마약김밥, 모듬전", "육회, 육회비빔밥", "치즈참치김밥, 세트김밥"],
+    "링크":[ 
+        "[박가네 빈대떡](https://naver.me/FDnCdFbP)",
+        "[형제육회 본점](https://naver.me/GeUR3WGZ)",
+        "[원조누드치즈김밥](https://naver.me/xDJucSNM)",
+    ]
+})
 
+제목
+st.title("📍 광장시장 맛집 추천")
+
+맛집 리스트 출력
+st.table(restaurants)
