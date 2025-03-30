@@ -44,3 +44,21 @@ st.subheader("국립중앙박물관")
 st.image("국립중앙박물관.png")
 st.write("🎒국립 중앙 박물관은 한국에 존재하는 가장 큰 국립 박물관으로 다양한 유물과 예술품을 전시해두었으며 관광객들에게 다양한 역사적 지식을 전해주는 공간입니다.")
 
+
+
+st.title("📍 남대문 시장 맛집 추천")
+
+st.table(restaurants)
+restaurants = pd.DataFrame({
+    "맛집 이름": ["효담칼국수 닭한마리 명동본점", "가메골손왕만두 남대문본점"],
+    "주요 메뉴": ["닭한마리 칼국수, 감자전, 효담 만두", "고기왕만두, 김치왕만두"],
+    "링크":[ 
+        "[효담 칼국수 닭한마리 명동본점](https://naver.me/GCvqNkCW)",
+        "[가메골손왕만두 남대문본점](https://naver.me/x8tNnx6Y)",
+    ]
+})
+
+
+
+st.table(restaurants)
+
