@@ -23,12 +23,6 @@ for name, coords in locations.items():
 
 # 지도 표시
 folium_static(m)
-st.subheader("인천 갑문 홍보관")
-st.image("갑문홍보관.png")
-st.write("🎒인천항 갑문 홍보관은 인천항의 갑문 시스템과 항만 운영의 중요성을 알리기 위한 전시공간으로 갑문의 역할 작동원리 역사등을 다양한방법으로 설명하는 장소이다.")
-st.subheader("차이나 타운")
-st.image("차이나타운.png")
-st.write("🎒인천 차이나타운은 한국애서 가장 오래된 차이나타운으로 전통적인 중국 건축물과 다채로운 음식문화등을 즐길 수 있는 관광지이다.")
 
 # ✅ 여행 일정 요약
 st.subheader("📅 주요 일정")
@@ -45,6 +39,15 @@ schedule = pd.DataFrame({
     ]
 })
 st.dataframe(schedule, hide_index=True)
+
+
+st.subheader("인천 갑문 홍보관")
+st.image("갑문홍보관.png")
+st.write("🎒인천항 갑문 홍보관은 인천항의 갑문 시스템과 항만 운영의 중요성을 알리기 위한 전시공간으로 갑문의 역할 작동원리 역사등을 다양한방법으로 설명하는 장소이다.")
+st.subheader("차이나 타운")
+st.image("차이나타운.png")
+st.write("🎒인천 차이나타운은 한국애서 가장 오래된 차이나타운으로 전통적인 중국 건축물과 다채로운 음식문화등을 즐길 수 있는 관광지이다.")
+
 
 # 맛집 데이터 설정
 restaurants = pd.DataFrame({
