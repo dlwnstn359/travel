@@ -33,3 +33,10 @@ schedule = pd.DataFrame({
     ]
 })
 st.dataframe(schedule, hide_index=True)
+
+st.subheader("서울대학교")
+st.image("서울대학교.png")
+st.write("🎒서울대학교는 국내 최고로 불리는 명문대로 우수한 연구 역량과 교육 시스템과 역사, 전통을 자랑하는 교육기관입니다")
+st.subheader("남대문 시장")
+st.image("남대문시장.png")
+st.write("🎒남대문 시장은 600년 이상 상업활동이 이어진 전통시장으로 다양한 상품과 음식점등이 혼합된 공간으로 도시의 발전과 변화를 상징하는 중요한 장소이기도 합니다.")
