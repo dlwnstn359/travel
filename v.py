@@ -57,8 +57,7 @@ restaurants = pd.DataFrame({
     ]
 })
 
-제목
 st.title("📍 광장시장 맛집 추천")
 
-맛집 리스트 출력
+
 st.table(restaurants)
