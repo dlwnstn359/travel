@@ -135,7 +135,7 @@ if st.button("Easter Egg"):
     if password_input:
         if password_input == PASSWORD:
             st.success("비밀번호가 올바릅니다!")
-            st.image("image.jpg", caption="비밀번호 인증 완료")
+            st.image("KakaoTalk_20250323_020515596.jpg", caption="비밀번호 인증 완료")
         else:
             st.error("비밀번호가 틀렸습니다. 다시 시도하세요.")
 
