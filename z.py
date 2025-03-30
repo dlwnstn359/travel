@@ -45,6 +45,25 @@ st.subheader("차이나 타운")
 st.image("차이나타운.png")
 st.write("🎒인천 차이나타운은 한국애서 가장 오래된 차이나타운으로 전통적인 중국 건축물과 다채로운 음식문화등을 즐길 수 있는 관광지이다.")
 
+# 맛집 데이터 설정
+restaurants = pd.DataFrame({
+    "맛집 이름": ["인천 차이나타운 공화춘", "신승반점", "연경", "만다복"],
+    "주요 메뉴": ["짜장면, 짬뽕, 탕수육", "삼선짬뽕, 볶음밥", "북경오리, 마라탕", "해물짬뽕, 깐풍기"],
+    "링크": [
+        "[공화춘 홈페이지](https://www.gonghwachun.co.kr)",
+        "[신승반점 소개](https://blog.naver.com/sinseungbanjeom)",
+        "[연경 홈페이지](https://www.yeongyeong.com)",
+        "[만다복 리뷰](https://blog.naver.com/mandabok)"
+    ]
+})
+
+# 제목
+st.title("📍 인천 차이나타운 맛집 추천")
+
+# 맛집 리스트 출력
+st.table(restaurants)
+
+
 
 
 
